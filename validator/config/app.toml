@@ -108,10 +108,10 @@ global-labels = [
 enable = true
 
 # Swagger defines if swagger documentation should automatically be registered.
-swagger = false
+swagger = true
 
 # Address defines the API server to listen on.
-address = "tcp://127.0.0.1:1317"
+address = "tcp://0.0.0.0:1317"
 
 # MaxOpenConnections defines the number of maximum open connections.
 max-open-connections = 1000
@@ -126,7 +126,7 @@ rpc-write-timeout = 0
 rpc-max-body-bytes = 1000000
 
 # EnableUnsafeCORS defines if CORS should be enabled (unsafe - use it at your own risk).
-enabled-unsafe-cors = false
+enabled-unsafe-cors = true
 
 ###############################################################################
 ###                           Rosetta Configuration                         ###
@@ -219,10 +219,10 @@ max-tx-gas-wanted = 500000
 enable = true
 
 # Address defines the EVM RPC HTTP server address to bind to.
-address = "127.0.0.1:8545"
+address = "0.0.0.0:8545"
 
 # Address defines the EVM WebSocket server address to bind to.
-ws-address = "127.0.0.1:8546"
+ws-address = "0.0.0.0:8546"
 
 # API defines a list of JSON-RPC namespaces that should be enabled
 # Example: "eth,txpool,personal,net,debug,web3"

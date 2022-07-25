@@ -18,4 +18,4 @@ services:
             - SYS_PTRACE
         environment:
             - NODE_NAME=fullnode
-        #command: sh init.sh
+        command: sh init.sh

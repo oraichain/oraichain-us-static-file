@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+    orain:
+        build: .
+        working_dir: /root/.evmosd
+        tty: true
+        ulimits:
+            nofile:
+                soft: 65536
+                hard: 65536
+        ports:
+            - 1317:1317
+            - 26656:26656
+            - 26657:26657
+            - 9090:9090
+            - 8545:8545
+        cap_add:
+            - SYS_PTRACE
+        environment:
+            - NODE_NAME=StrongValidator
+        command: sh init.sh

@@ -3,7 +3,9 @@
 Preconditional: <strong>git, docker, docker-compose</strong>
 
 <ins>Step 1</ins>: clone this repo into your server
+
 <ins>Step 2</ins>: change directory to fullnode, and edit docker-compose.yml file. Let change the value of NODE_NAME (from environment)
+
 <ins>Step 3</ins>: run command
 > docker-compose up -d
 

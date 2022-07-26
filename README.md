@@ -39,3 +39,26 @@ Preconditional: <strong>git, docker, docker-compose, a name, mnemonic, password 
 
 <ins>Step 6</ins>: Logout your container and start syncing in the background
 > docker-compose exec -d orain bash -c "evmosd start --pruning=nothing --rpc.unsafe --log_level info --json-rpc.api eth,txpool,personal,net,debug,web3 --moniker 'ADD_YOUR_NODE_NAME_HERE'"
+
+<ins>Step 7</ins>: After your validator node synced successfully, you can create validator account. (You need some orain) Please enter the container and run bellow command (you can change your content)
+>evmosd tx staking create-validator \
+>  --amount=10000000000000000000orain \
+>  --pubkey=$(evmosd tendermint show-validator) \
+>  --moniker="megaorai" \
+>  --website="https://orai.io" \
+>  --details="To infinity and beyond!" \
+>  --chain-id=balcony_666666-1 \
+>  --commission-rate="0.05" \
+>  --commission-max-rate="0.10" \
+>  --commission-max-change-rate="0.01" \
+>  --min-self-delegation="1000000" \
+>  --gas="auto" \
+>  --gas-prices="0.05orain" \
+>  --gas-adjustment="1.5" \
+>  --from=validator_key
+
+<ins>Step 8</ins>: Please enter the container and get more info.
+> docker-compose exec orain bash
+
+- get your node status: 
+> evmosd status

@@ -17,5 +17,5 @@ services:
         cap_add:
             - SYS_PTRACE
         environment:
-            - NODE_NAME=StrongValidator
-        command: sh init.sh
+            - NODE_NAME=Megaorai
+        command: tail -f /dev/null

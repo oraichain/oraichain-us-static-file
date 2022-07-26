@@ -37,8 +37,5 @@ Preconditional: <strong>git, docker, docker-compose, a name, mnemonic, password 
 <ins>Step 5</ins>: Create your validator key. Run below command and following the instruction (need to input mnemonic and password)
 > evmosd keys add validator_key --recover
 
-<ins>Step 6</ins>: Add your orain to your validator account (first stake) (100000000000000000000000orain = 100000 orain)
-> evmosd add-genesis-account  validator_key 100000000000000000000000orain
-
-<ins>Step 7</ins>: Start to syncing
-> evmosd start --pruning=nothing --rpc.unsafe --log_level info --json-rpc.api eth,txpool,personal,net,debug,web3 --moniker "ADD_YOUR_NODE_NAME_HERE"
+<ins>Step 6</ins>: Logout your container and start syncing in the background
+> docker-compose exec -d orain bash -c "evmosd start --pruning=nothing --rpc.unsafe --log_level info --json-rpc.api eth,txpool,personal,net,debug,web3 --moniker 'ADD_YOUR_NODE_NAME_HERE'"

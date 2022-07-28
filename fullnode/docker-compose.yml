@@ -22,4 +22,8 @@ services:
         volumes:
             - ./init.sh:/root/init.sh
             - ./.evmosd:/root/.evmosd
+            - cosmovisor:/root/cosmovisor
         command: sh init.sh
+
+volumes:
+    cosmovisor: null

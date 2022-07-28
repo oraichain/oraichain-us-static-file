@@ -1,10 +1,14 @@
 ## Add a full node
 
-Preconditional: <strong>git, docker, docker-compose, a name for your node</strong>
+Preconditional: <strong>docker, docker-compose, a name for your node. OS: Linux</strong>
 
-<ins>Step 1</ins>: clone this repo into your server.
+<ins>Step 1</ins>: Download necessary prerequisite files: 
 
-<ins>Step 2</ins>: change directory to fullnode folder, and edit docker-compose.yml file. Let change the value of NODE_NAME (from environment).
+```
+wget https://raw.githubusercontent.com/oraichain/oraichain-us-static-file/master/fullnode/docker-compose.yml && wget https://raw.githubusercontent.com/oraichain/oraichain-us-static-file/master/fullnode/init.sh
+```
+
+<ins>Step 2</ins>: Edit docker-compose.yml file. Let change the value of NODE_NAME (from environment).
 
 <ins>Step 3</ins>: run up command.
 > docker-compose up -d

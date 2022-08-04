@@ -1,7 +1,7 @@
 version: '3.3'
 services:
     orain:
-        image: orai/orai-balcony:0.0.1
+        image: oraichain/orai-balcony:0.0.1
         working_dir: /root
         tty: true
         ulimits:
@@ -19,6 +19,7 @@ services:
         environment:
             - NODE_NAME=fullnode
             - DATA_HOME=/root/.evmosd
+            - PERSISTENT_PEERS=4725ef9ef94b4a23fcf99b62b2729ad029545c68@159.203.165.199:26656
         volumes:
             - ./init.sh:/root/init.sh
             - ./.evmosd:/root/.evmosd

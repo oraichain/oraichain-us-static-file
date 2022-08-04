@@ -1,8 +1,8 @@
 version: '3.3'
 services:
     orain:
-        build: .
-        working_dir: /root/.evmosd
+        image: oraichain/orai-balcony:0.0.1
+        working_dir: /root
         tty: true
         ulimits:
             nofile:
@@ -17,5 +17,14 @@ services:
         cap_add:
             - SYS_PTRACE
         environment:
-            - NODE_NAME=Megaorai
-        command: tail -f /dev/null
+            - NODE_NAME=validator
+            - DATA_HOME=/root/.evmosd
+            - PERSISTENT_PEERS=4725ef9ef94b4a23fcf99b62b2729ad029545c68@159.203.165.199:26656
+        volumes:
+            - ./init.sh:/root/init.sh
+            - ./.evmosd:/root/.evmosd
+            - cosmovisor:/root/cosmovisor
+        command: sh init.sh
+
+volumes:
+    cosmovisor: null

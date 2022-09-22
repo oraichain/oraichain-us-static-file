@@ -1,7 +1,7 @@
 version: '3.3'
 services:
     orain:
-        image: oraichain/orai-balcony:0.0.1
+        image: oraichain/oraius-oraichain-pro:0.0.1
         working_dir: /root
         tty: true
         ulimits:

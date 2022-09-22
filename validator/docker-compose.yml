@@ -17,6 +17,7 @@ services:
         cap_add:
             - SYS_PTRACE
         environment:
+            - CHAIN_ID=oraichainpro_66666-1
             - NODE_NAME=validator
             - DATA_HOME=/root/.evmosd
             - PERSISTENT_PEERS=4725ef9ef94b4a23fcf99b62b2729ad029545c68@159.203.165.199:26656

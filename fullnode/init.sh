@@ -6,9 +6,9 @@ if [[ -d "$DATA_HOME/data" ]]
 then
 echo ''
 else
-    evmosd init "$NODE_NAME" --chain-id=balcony_666666-1 --home $DATA_HOME
+    evmosd init "$NODE_NAME" --chain-id=$CHAIN_ID --home $DATA_HOME
 
-    wget https://raw.githubusercontent.com/oraichain/oraichain-us-static-file/master/fullnode/config/genesis.json -O $DATA_HOME/config/genesis.json
+    wget https://raw.githubusercontent.com/oraichain/oraichain-us-static-file/master/genesis.json -O $DATA_HOME/config/genesis.json
 
     sed -i "s/enabled-unsafe-cors *= *.*/enabled-unsafe-cors = true/g" $DATA_HOME/config/app.toml
     sed -i "s/cors_allowed_origins *= *.*/cors_allowed_origins = \[\"*\"\]/g" $DATA_HOME/config/config.toml

@@ -54,20 +54,19 @@ wget https://raw.githubusercontent.com/oraichain/oraichain-us-static-file/master
 
 ```
 evmosd tx staking create-validator \
-  --amount=10000000000000000000orain \
+  --amount=1000000000000000000000aorain \
   --pubkey=$(evmosd tendermint show-validator) \
-  --moniker="megaorai" \
+  --moniker="validator" \
   --website="https://orai.io" \
   --details="To infinity and beyond!" \
   --chain-id=balcony_666666-1 \
   --commission-rate="0.05" \
-  --commission-max-rate="0.10" \
+  --commission-max-rate="1" \
   --commission-max-change-rate="0.01" \
   --min-self-delegation="1000000" \
   --gas="auto" \
-  --gas-prices="0.05orain" \
   --gas-adjustment="1.5" \
-  --from=validator_key
+  --from=validator_key -y
 ```
 
 <ins>Step 8</ins>: Please enter the container and get more info.

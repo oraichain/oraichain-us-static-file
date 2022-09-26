@@ -59,7 +59,7 @@ evmosd tx staking create-validator \
   --moniker="validator" \
   --website="https://orai.io" \
   --details="To infinity and beyond!" \
-  --chain-id=balcony_666666-1 \
+  --chain-id=oraichainpro-66666-1 \
   --commission-rate="0.05" \
   --commission-max-rate="1" \
   --commission-max-change-rate="0.01" \

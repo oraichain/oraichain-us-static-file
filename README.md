@@ -38,6 +38,14 @@ wget https://raw.githubusercontent.com/oraichain/oraichain-us-static-file/master
 
 <ins>Step 2</ins>: Edit docker-compose.yml file. Let change the value of NODE_NAME & PERSISTENT_PEERS (from environment).
 
+Example for the list of persistent peers in the docker-compose file: 8c01a279e6d62c89a0deb09bb23f9b5ae1969be8@1.2.3.4:26656,8c01a279e6d62c89a0deb09bb23f9b5ae1969be8@4.5.6.7:26656
+
+Current usable persistent peers: 
+
+```
+8c01a279e6d62c89a0deb09bb23f9b5ae1969be8@67.205.169.224:25656
+```
+
 <ins>Step 3</ins>: run up command.
 
 `docker-compose up -d`

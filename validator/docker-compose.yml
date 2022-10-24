@@ -20,7 +20,7 @@ services:
             - CHAIN_ID=oraichainpro_66666-1
             - NODE_NAME=validator
             - DATA_HOME=/root/.evmosd
-            - PERSISTENT_PEERS=4725ef9ef94b4a23fcf99b62b2729ad029545c68@159.203.165.199:26656
+            - PERSISTENT_PEERS=8c01a279e6d62c89a0deb09bb23f9b5ae1969be8@67.205.169.224:25656
         volumes:
             - ./init.sh:/root/init.sh
             - ./.evmosd:/root/.evmosd

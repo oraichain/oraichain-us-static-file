@@ -74,7 +74,7 @@ evmosd tx staking create-validator \
   --min-self-delegation="1" \
   --gas="auto" \
   --gas-adjustment="1.5" \
-  --from=validator_key -y
+  --from=validator_key -y -b block
 ```
 
 <ins>Step 8</ins>: Please enter the container and get more info.

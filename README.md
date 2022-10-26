@@ -62,7 +62,7 @@ Current usable persistent peers:
 
 ```
 evmosd tx staking create-validator \
-  --amount=1000000000000000000000aorain \
+  --amount=1aorain \
   --pubkey=$(evmosd tendermint show-validator) \
   --moniker="validator" \
   --website="https://orai.io" \
@@ -71,7 +71,7 @@ evmosd tx staking create-validator \
   --commission-rate="0.05" \
   --commission-max-rate="1" \
   --commission-max-change-rate="0.01" \
-  --min-self-delegation="1000000" \
+  --min-self-delegation="1" \
   --gas="auto" \
   --gas-adjustment="1.5" \
   --from=validator_key -y
